@@ -6,4 +6,5 @@
 @import '@skeletonlabs/skeleton/optional/presets';
 @import '@skeletonlabs/skeleton/themes/rose';
 
+/* Allow for light and dark mode using body attribute */
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));

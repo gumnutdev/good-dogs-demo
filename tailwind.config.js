@@ -1,10 +1,9 @@
 // tailwind.config.js
+import forms from '@tailwindcss/forms'
+
 module.exports = {
-    theme: {
-      // ...
-    },
+    theme: {  },
     plugins: [
-      require('@tailwindcss/forms'),
-      // ...
+      forms
     ],
   }
