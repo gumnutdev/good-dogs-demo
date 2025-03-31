@@ -8,10 +8,16 @@
 </head>
 
 <body class="dark">
-    <script type="module" src="/client.js"></script>
-    <div class="grid m-4">
+    <script type="module" src="/client.js" />
+    <script>
+        import shepherdUrl from "./noun-shepherd.svg"
+    </script>
+    <div class="grid m-8">
         <header class="mb-6">
-            <h1 class="h1">Good Dogs with Gumnut</h1>
+            <h1 class="h1 flex items-center">
+                <span>Good Dogs with Gumnut</span>             
+                <img src="noun-shepherd.svg" alt="Shepherd" class="h-18 ml-2" />
+            </h1>
         </header>
         
         <main>
@@ -28,7 +34,7 @@
                     </label>
 
                     <label for="vaccinated" class="col-span-1 block text-sm font-medium">
-                        <span class="label-text mb-1">Vaccinated?</span>
+                        <span class="label-text mb-2">Vaccinated?</span>
                         <div class="flex space-x-4">
                             <label class="flex items-center space-x-2">
                                 <input class="radio" type="radio" checked name="vaccination_status" value="vaccinated" />
@@ -42,9 +48,13 @@
                     </label>
 
                     <label class="label col-span-2">
-                        <span class="label-text mb-1">Good dog?</span>
-                        <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
-                    </div>
+                        <span class="label-text">Good dog?</span>
+                        <div class="flex items-center gap-2">
+                            <span class="text-sm">Good</span>
+                            <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
+                            <span class="text-sm">Gooderer</span>
+                        </div>
+                    </label>
                 </form>
             </div>
         </main>
