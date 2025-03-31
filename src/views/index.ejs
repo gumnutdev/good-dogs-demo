@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="rose" data-mode="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Dogs with Gumnut</title>
+    <link rel="stylesheet" href="/public/use_styles.css">
+</head>
+<body class="light">
+    <div class="grid m-4">
+        <header class="mb-6">
+            <h1 class="h1">Good Dogs with Gumnut</h1>
+        </header>
+        
+        <main>
+            <div class="card preset-filled-surface-50-950 border-[1px] border-surface-200-800 w-full p-4">
+                <form class="grid grid-cols-3 gap-4">
+                    <label for="dogName" class="col-span-1 block text-sm font-medium">
+                        <span class="label-text">Dog name</span>
+                        <input type="text" class="input" placeholder="Rover" id="dogName" name="dogName">
+                    </label>
+
+                    <label for="description" class="col-span-3 row-span-2" block text-sm font-medium">
+                        <span class="label-text">Description</span>
+                        <textarea class="textarea"id="description" name="description" rows="4" placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."></textarea>
+                    </label>
+
+                    <label for="vaccinated" class="col-span-1 block text-sm font-medium">
+                        <span class="label-text">Vaccinated?</span>
+                        <div class="flex space-x-4">
+                            <label class="flex items-center space-x-2">
+                                <input class="radio" type="radio" checked name="vaccination_status" value="vaccinated" />
+                                <p>Yes</p>
+                            </label>
+                            <label class="flex items-center space-x-2">
+                                <input class="radio" type="radio" name="vaccination_status" value="unvaccinated" />
+                                <p>No</p>
+                            </label>
+                        </div>
+                    </label>
+
+                    <label class="label col-span-2">
+                        <span class="label-text">Good dog?</span>
+                        <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
+                    </div>
+                </form>
+            </div>
+
+
+
+
+        </main>
+    </div>
+</body>
+</html> 
