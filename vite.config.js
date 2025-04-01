@@ -11,5 +11,9 @@ export default {
   build: {
     emptyOutDir: true,
     outDir: '../dist/client',
+  },
+  server: {
+    host: true,
+    allowedHosts: true
   }
 }
