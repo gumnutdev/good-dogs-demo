@@ -25,28 +25,35 @@
                 <form class="grid grid-cols-3 gap-4">
                     <label for="dogName" class="col-span-1 block text-sm font-medium">
                         <span class="label-text mb-1">Dog name</span>
-                        <input type="text" class="input border-[1px] border-surface-300-700" placeholder="Rover" id="dogName" name="dogName">
+                        <gumnut-text type="text" class="input border-[1px] border-surface-300-700" placeholder="Rover" id="dogName" name="dogName">
                     </label>
 
                     <label for="description" class="col-span-3 row-span-2 block text-sm font-medium">
                         <span class="label-text mb-1">Description</span>
-                        <textarea class="textarea border-[1px] border-surface-300-700" id="description" name="description" rows="4" placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."></textarea>
+                        <gumnut-text multiline class="textarea border-[1px] border-surface-300-700" id="description" name="description" rows="4" placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."></gumnut-text-area>
                     </label>
+
 
                     <label for="Winning Features" class="col-span-1 block text-sm font-medium">
                         <span class="label-text mb-2">Winning Features</span>
                         <div class="flex space-x-4">
                             <label class="flex items-center space-x-2">
-                                <input class="checkbox" type="checkbox" name="floppy_ears" checked />
-                                <p>Floppy Ears</p>
+                                <gumnut-data id="floppyEars">
+                                    <input class="checkbox" type="checkbox" name="floppyEars" checked />
+                                    <p>Floppy Ears</p>
+                                </gumnut-data>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input class="checkbox" type="checkbox" name="Boopable Snoot" />
-                                <p>Boopable Snoot</p>
+                                <gumnut-data id="boopableSnoot">
+                                    <input class="checkbox" type="checkbox" name="boopableSnoot" />
+                                    <p>Boopable Snoot</p>
+                                </gumnut-data>
                             </label>
                             <label class="flex items-center space-x-2">
-                                <input class="checkbox" type="checkbox" name="Toe Beans" />
-                                <p>Toe Beans</p>
+                                <gumnut-data id="toeBeans">
+                                    <input class="checkbox" type="checkbox" name="toeBeans" />
+                                    <p>Toe Beans</p>
+                                </gumnut-data>
                             </label>
                         </div>
                     </label>
@@ -55,7 +62,9 @@
                         <span class="label-text">Good dog?</span>
                         <div class="flex items-center gap-2">
                             <span class="text-sm">Good</span>
-                            <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
+                            <gumnut-data id="goodDogRange">
+                                <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
+                            </gumnut-data>
                             <span class="text-sm">Gooderer</span>
                         </div>
                     </label>
