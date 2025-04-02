@@ -52,11 +52,17 @@ try {
 
     document.getElementById('connection-status').gumnutApi = gumnut;
 
-    function saveDocument() {
-        doc.snapshot();
-        console.log('Document snapshot created');
-    }
+    document.getElementById('save').addEventListener('click', () => {
+        doc.actions.commit(async (changes) => { })
+
+        console.log('Document snapshot created'); 
+    });
 
 } catch (error) {
     console.error("Error connecting to Gumnut", error);
+}
+
+function saveDocument() {
+    doc.snapshot();
+    console.log('Document snapshot created');
 }
