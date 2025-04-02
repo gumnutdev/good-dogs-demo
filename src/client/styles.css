@@ -8,3 +8,7 @@
 
 /* Allow for light and dark mode using body attribute */
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
+:root {
+    --gumnut-flag-font: 8px/8px arial;
+  }

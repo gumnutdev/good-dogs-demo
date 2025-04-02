@@ -16,58 +16,76 @@
         <header class="mb-6">
             <h1 class="h1 flex items-center">
                 <span>Good Dogs with Gumnut</span>             
-                <img src="noun-shepherd.svg" alt="Shepherd" class="h-18 ml-2" />
+                <img src="noun-shepherd.svg" alt="🐕" class="h-18 ml-2" />
+                <gumnut-status id="connection-status"></gumnut-status>
             </h1>
         </header>
         
         <main>
             <div class="card preset-filled-surface-50-950 border-[1px] border-surface-200-800 w-full p-4">
-                <form class="grid grid-cols-3 gap-4">
-                    <label for="dogName" class="col-span-1 block text-sm font-medium">
+                <form class="grid grid-cols-5 gap-4">
+                    <label for="dogName" class="col-span-2 block text-sm font-medium">
                         <span class="label-text mb-1">Dog name</span>
-                        <gumnut-text type="text" class="input border-[1px] border-surface-300-700" placeholder="Rover" id="dogName" name="dogName">
+                        <div class="flex flex-row items-center gap-2">
+                            <gumnut-text type="text" class="p-3 input border-[1px] border-surface-300-700" placeholder="Rover" id="dogName" name="dogName"></gumnut-text>
+                            <gumnut-focus name="dogName"></gumnut-focus>
+                        </div>
                     </label>
 
-                    <label for="description" class="col-span-3 row-span-2 block text-sm font-medium">
+                    <label for="description" class="col-span-5 row-span-2 block text-sm font-medium">
                         <span class="label-text mb-1">Description</span>
-                        <gumnut-text multiline class="textarea border-[1px] border-surface-300-700" id="description" name="description" rows="4" placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."></gumnut-text-area>
-                    </label>
-
-
-                    <label for="Winning Features" class="col-span-1 block text-sm font-medium">
-                        <span class="label-text mb-2">Winning Features</span>
-                        <div class="flex space-x-4">
-                            <label class="flex items-center space-x-2">
-                                <gumnut-data id="floppyEars">
-                                    <input class="checkbox" type="checkbox" name="floppyEars" checked />
-                                    <p>Floppy Ears</p>
-                                </gumnut-data>
-                            </label>
-                            <label class="flex items-center space-x-2">
-                                <gumnut-data id="boopableSnoot">
-                                    <input class="checkbox" type="checkbox" name="boopableSnoot" />
-                                    <p>Boopable Snoot</p>
-                                </gumnut-data>
-                            </label>
-                            <label class="flex items-center space-x-2">
-                                <gumnut-data id="toeBeans">
-                                    <input class="checkbox" type="checkbox" name="toeBeans" />
-                                    <p>Toe Beans</p>
-                                </gumnut-data>
-                            </label>
+                        <div class="flex flex-row items-center gap-2">
+                            <gumnut-text multiline="true" resize="auto" class="p-3 textarea border-[1px] border-surface-300-700" id="description" name="description" rows="4" placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."></gumnut-text>
+                            <gumnut-focus name="description"></gumnut-focus>
                         </div>
                     </label>
 
-                    <label class="label col-span-2">
-                        <span class="label-text">Good dog?</span>
-                        <div class="flex items-center gap-2">
-                            <span class="text-sm">Good</span>
-                            <gumnut-data id="goodDogRange">
-                                <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
-                            </gumnut-data>
-                            <span class="text-sm">Gooderer</span>
-                        </div>
-                    </label>
+                    <div class="col-span-5 flex gap-8">
+                        <span>
+                            <label for="Winning Features" class="label grow flex justify-center flex-col col-span-2">
+                                <span class="label-text">Winning Features</span>
+                                <div class="flex space-x-4">
+                                    <label class="flex items-center space-x-2">
+                                        <gumnut-data id="floppyEars">
+                                            <input class="checkbox" type="checkbox" name="floppyEars" checked />
+                                            <p class="text-sm">Floppy Ears</p>
+                                        </gumnut-data>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <gumnut-data id="boopableSnoot">
+                                            <input class="checkbox" type="checkbox" name="boopableSnoot" />
+                                            <p class="text-sm">Boopable Snoot</p>
+                                        </gumnut-data>
+                                    </label>
+                                    <label class="flex items-center space-x-2">
+                                        <gumnut-data id="toeBeans">
+                                            <input class="checkbox" type="checkbox" name="toeBeans" />
+                                            <p class="text-sm">Toe Beans</p>
+                                        </gumnut-data>
+                                    </label>
+                                </div>
+                            </label>
+                        </span>
+
+                        <span class="grow">
+                            <label class="label grow flex justify-center flex-col col-span-2">
+                                <span class="label-text">Good dog?</span>
+                                    <gumnut-data id="goodDogRange" class="grow">
+                                        <input class="input" type="range" id="goodDog" name="goodDog" value="150" min="100" max="200">
+                                    </gumnut-data>
+                                <div class="flex items-center justify-between mt-0">
+                                    <span class="text-sm">Good</span>
+                                    <span class="text-sm">Gooderer</span>
+                                </div>
+                            </label>
+                        </span>
+
+                        <span class="justify-self-end self-center">
+                            <div>
+                                <button type="button" class="btn btn-base preset-tonal-secondary" onclick="saveDocument()">Save</button>
+                            </div>
+                        </span>
+                    </div>
                 </form>
             </div>
         </main>

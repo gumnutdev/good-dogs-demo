@@ -29,10 +29,14 @@ try {
     console.log("Document ready", doc);
 
     const dogNameNode = doc.forNode('dogName')
-    document.getElementById('dogName').node = dogNameNode;
+    document.querySelectorAll('[name="dogName"]').forEach(element => {
+        element.node = dogNameNode;
+    });
 
     const descriptionNode = doc.forNode('description')
-    document.getElementById('description').node = descriptionNode;
+    document.querySelectorAll('[name="description"]').forEach(element => {
+        element.node = descriptionNode;
+    });
 
     const floppyEarsNode = doc.forNode('floppyEars')
     document.getElementById('floppyEars').node = floppyEarsNode;
@@ -45,6 +49,13 @@ try {
 
     const goodDogRangeNode = doc.forNode('goodDogRange')
     document.getElementById('goodDogRange').node = goodDogRangeNode;
+
+    document.getElementById('connection-status').gumnutApi = gumnut;
+
+    function saveDocument() {
+        doc.snapshot();
+        console.log('Document snapshot created');
+    }
 
 } catch (error) {
     console.error("Error connecting to Gumnut", error);
