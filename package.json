@@ -17,7 +17,7 @@
     "@skeletonlabs/skeleton": "^3.1.1",
     "ejs": "^3.1.9",
     "fastify": "^5.2.2",
-    "gumnut-v0-api": "^0.1.15",
+    "gumnut-v0-api": "^0.2.3",
     "tailwindcss": "^4.0.17"
   },
   "devDependencies": {
