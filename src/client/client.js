@@ -4,17 +4,17 @@ console.log('Client-side JavaScript loaded');
 import { connectToGumnutDoc, buildTestToken } from 'gumnut-v0-api';
 import 'gumnut-v0-api/dom';
 
+console.log('Connecting to Gumnut.dev');
+
 const doc = connectToGumnutDoc({
     docId: "good-dogs",
-    getToken: token
+    getToken: () => buildTestToken('bandit-h', {
+        name: 'Bandit',
+        email: 'bandit.h@gumnut.dev'
+    })
 }).doc
 
-const token = () => buildTestToken('bandit-h', {
-    name: 'Bandit',
-    email: 'bandit.h@gumnut.dev'
-});
-
-
+console.log('Waiting for Gumnut.dev to be ready');
 await doc.ready;
 console.log(`Ready to edit "${doc.docId}" with Gumnut.dev`);
 
