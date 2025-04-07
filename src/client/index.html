@@ -11,13 +11,17 @@
     <script type="module" src="/client.js" />
     <script>
         import shepherdUrl from "./noun-shepherd.svg"
+
+        function save() {
+            console.log("Definitely saved somewhere, yessir.")
+        }
     </script>
     <div class="grid m-8">
         <header class="mb-6">
             <h1 class="h1 flex items-center">
                 <span>Good Dogs with Gumnut</span>             
                 <img src="noun-shepherd.svg" alt="🐕" class="h-18 ml-2" />
-                <gumnut-status id="connection-status"></gumnut-status>
+                <span><gumnut-status id="connection-status"></gumnut-status><span id="connection-status-message" class="text-sm text-red-500">Something went wrong connecting to Gumnut.dev</span></span>
             </h1>
         </header>
         
@@ -28,7 +32,7 @@
                         <span class="label-text mb-1">Dog name</span>
                         <div class="flex flex-row items-center gap-2">
                             <gumnut-text type="text" class="p-3 input border-[1px] border-surface-300-700" placeholder="Rover" id="dogName" name="dogName"></gumnut-text>
-                            <gumnut-focus name="dogName"></gumnut-focus>
+                            <gumnut-focus id="dogNameFocus"></gumnut-focus>
                         </div>
                     </label>
 
@@ -36,7 +40,7 @@
                         <span class="label-text mb-1">Description</span>
                         <div class="flex flex-row items-center gap-2">
                             <gumnut-text multiline="true" resize="auto" class="p-3 textarea border-[1px] border-surface-300-700" id="description" name="description" rows="4" placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."></gumnut-text>
-                            <gumnut-focus name="description"></gumnut-focus>
+                            <gumnut-focus id="descriptionFocus"></gumnut-focus>
                         </div>
                     </label>
 

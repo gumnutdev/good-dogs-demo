@@ -12,3 +12,12 @@
 :root {
     --gumnut-flag-font: 8px/8px arial;
   }
+
+  /*  */
+gumnut-status:state(error) + span {
+  display: block;
+}
+
+gumnut-status:not(:state(error)) + span {
+  display: none;
+}
