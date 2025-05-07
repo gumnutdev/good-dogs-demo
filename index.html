@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Good Dogs with Gumnut</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+
+  <body>
+    <script type="module" src="/src/client.js"></script>
+    <div class="grid m-8">
+      <header class="mb-6">
+        <h1 class="h1 flex items-center">
+          <span>Good Dogs with Gumnut</span>
+          <img
+            src="/src/noun-shepherd.svg"
+            alt="Shepherd"
+            class="shepherd-icon"
+          />
+        </h1>
+      </header>
+
+      <main>
+        <div class="card">
+          <form>
+            <div class="form-layout">
+              <div class="form-left">
+                <div class="form-group">
+                  <label for="dogName">
+                    <span class="label-text">Dog name</span>
+                    <input
+                      type="text"
+                      class="input"
+                      placeholder="Rover"
+                      id="dogName"
+                      name="dogName"
+                    />
+                  </label>
+                </div>
+
+                <div class="form-group">
+                  <label for="description">
+                    <span class="label-text">Description</span>
+                    <textarea
+                      class="textarea"
+                      id="description"
+                      name="description"
+                      rows="4"
+                      placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."
+                    ></textarea>
+                  </label>
+                </div>
+              </div>
+
+              <div class="form-right">
+                <div class="features-section">
+                  <span class="label-text">Winning Features</span>
+                  <div class="checkbox-group">
+                    <label class="checkbox-label">
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        name="floppy_ears"
+                        checked
+                      />
+                      <span>Floppy Ears</span>
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        name="Boopable Snoot"
+                      />
+                      <span>Boopable Snoot</span>
+                    </label>
+                    <label class="checkbox-label">
+                      <input
+                        class="checkbox"
+                        type="checkbox"
+                        name="Toe Beans"
+                      />
+                      <span>Toe Beans</span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="range-container">
+                  <span class="text-sm">Good</span>
+                  <input
+                    class="input"
+                    type="range"
+                    id="goodDog"
+                    name="goodDog"
+                    value="150"
+                    min="100"
+                    max="200"
+                  />
+                  <span class="text-sm">Gooderer</span>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
