@@ -24,3 +24,5 @@ No worries! The `step-1-complete` branch implements everything in the Getting St
 6. Open `http://localhost:5173` in your browser (two windows)
 
 Now you should be able to edit all the fields locally, and see them update, like this:
+
+![Whole form](/whole-form.gif)
