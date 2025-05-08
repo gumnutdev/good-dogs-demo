@@ -21,4 +21,6 @@ No worries! The `step-1-complete` branch implements everything in the Getting St
 4. Update the configuration:
    a. update `localDevKey` and `projectId`
 5. Run `npm run dev`
-6. Open `http://localhost:5173` in your browser
+6. Open `http://localhost:5173` in your browser (two windows)
+
+Now you should be able to edit all the fields locally, and see them update, like this:
