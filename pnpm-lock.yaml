@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@gumnutdev/api':
+        specifier: ^0.3.16
+        version: 0.3.16
     devDependencies:
       vite:
         specifier: ^5.4.15
@@ -151,6 +155,9 @@ packages:
     engines: {node: '>=12'}
     cpu: [x64]
     os: [win32]
+
+  '@gumnutdev/api@0.3.16':
+    resolution: {integrity: sha512-gOaceHmjPqWYuTWRuSdqdEyXmm0UvsryS3xtG3manTTjZIhzrWpI7lHxdGijG+xnuJ1jGii3WnkO83HoVZZEZQ==}
 
   '@rollup/rollup-android-arm-eabi@4.40.2':
     resolution: {integrity: sha512-JkdNEq+DFxZfUwxvB58tHMHBHVgX23ew41g1OQinthJ+ryhdRk67O31S7sYw8u2lTjHUPFxwar07BBt1KHp/hg==}
@@ -455,6 +462,8 @@ snapshots:
 
   '@esbuild/win32-x64@0.21.5':
     optional: true
+
+  '@gumnutdev/api@0.3.16': {}
 
   '@rollup/rollup-android-arm-eabi@4.40.2':
     optional: true

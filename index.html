@@ -22,10 +22,13 @@
       </header>
 
       <main>
+        <gumnut-status></gumnut-status>
         <form class="card">
           <label for="dogName">
-            <span class="label-text">Dog name</span>
-            <input
+            <span class="label-text"
+              >Dog name <gumnut-focus id="dogNameFocus"
+            /></span>
+            <gumnut-text
               type="text"
               class="input"
               placeholder="Rover"
@@ -35,56 +38,77 @@
           </label>
 
           <label for="description">
-            <span class="label-text">Description</span>
-            <textarea
+            <span class="label-text"
+              >Description <gumnut-focus id="descriptionFocus"
+            /></span>
+            <gumnut-text
+              multiline
               class="textarea"
               id="description"
               name="description"
               rows="4"
               placeholder="Dog-shaped with a dog aroma and a dog personality. Very good dog."
-            ></textarea>
+            ></gumnut-text>
           </label>
 
           <div class="features-section">
             <span class="label-text">Winning Features</span>
             <div class="checkbox-group">
               <label class="checkbox-label">
-                <input
-                  class="checkbox"
-                  type="checkbox"
-                  name="floppy_ears"
-                  checked
-                />
-                <span>Floppy Ears</span>
+                <gumnut-data id="floppyEars">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="floppyEars"
+                    checked
+                  />
+                </gumnut-data>
+                <span>Floppy Ears <gumnut-focus id="floppyEarsFocus" /></span>
               </label>
               <label class="checkbox-label">
-                <input class="checkbox" type="checkbox" name="Boopable Snoot" />
-                <span>Boopable Snoot</span>
+                <gumnut-data id="boopableSnoot">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="Boopable Snoot"
+                  />
+                </gumnut-data>
+                <span
+                  >Boopable Snoot <gumnut-focus id="boopableSnootFocus"
+                /></span>
               </label>
               <label class="checkbox-label">
-                <input class="checkbox" type="checkbox" name="Toe Beans" />
-                <span>Toe Beans</span>
+                <gumnut-data id="toeBeans">
+                  <input class="checkbox" type="checkbox" name="Toe Beans" />
+                </gumnut-data>
+                <span>Toe Beans <gumnut-focus id="toeBeansFocus" /></span>
               </label>
             </div>
           </div>
 
           <div class="slider-section">
-            <span class="label-text">Good dog?</span>
+            <span class="label-text"
+              >Good dog? <gumnut-focus id="goodDogFocus"
+            /></span>
             <div class="slider-container">
               <span class="slider-label">Good</span>
-              <input
-                type="range"
-                id="goodDog"
-                name="goodDog"
-                min="0"
-                max="100"
-                value="50"
-              />
+              <gumnut-data id="goodDog">
+                <input
+                  type="range"
+                  id="goodDog"
+                  name="goodDog"
+                  min="0"
+                  max="100"
+                  value="50"
+                />
+              </gumnut-data>
               <span class="slider-label">Gooderer</span>
             </div>
           </div>
 
-          <button type="submit" class="submit-button">Save doggo</button>
+          <button type="button" id="save" class="submit-button">
+            Save doggo
+          </button>
         </form>
       </main>
     </div>

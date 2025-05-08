@@ -12,5 +12,8 @@
   },
   "devDependencies": {
     "vite": "^5.4.15"
+  },
+  "dependencies": {
+    "@gumnutdev/api": "^0.3.16"
   }
 }
