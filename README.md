@@ -10,15 +10,17 @@ Clone this repo, then head over to the Getting Started guide and follow along wi
 
 ## Just show me the completed site
 
-> [!TIP] 
+> [!TIP]
 > If you just want to see Gumnut in Action, you can find live demos at https://demo.gumnut.dev
 
 No worries! The `step-1-complete` branch implements everything in the Getting Started guide. To see it:
 
 1. `git clone` this repo then `cd good-dogs-demo`
-1. `git checkout step-1-complete`
-1. `npm install`
-1. `npm run dev`
+2. `git checkout step-1-complete`
+3. `npm install`
+4. Update the configuration:
+   a. update `localDevKey` and `projectId`
+5. Run `npm run dev`
+6. Open `http://localhost:5173` in your browser (two windows)
 
-Now, you can open `http://localhost:3000` in two tabs; Any changes you make in one will be reflected in the other.
-
+Now you should be able to edit all the fields locally, and see them update, like this:
