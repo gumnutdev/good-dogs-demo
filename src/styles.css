@@ -19,8 +19,10 @@ body {
 .grid {
   display: grid;
   gap: 1rem;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 0;
 }
 
 .m-8 {
@@ -34,11 +36,12 @@ body {
 /* Form layout */
 .form-layout {
   display: flex;
-  gap: 3rem;
+  width: 100%;
 }
 
 .form-left {
   flex: 1;
+  width: 100%;
 }
 
 .form-group {
@@ -53,13 +56,14 @@ body {
 /* Form elements */
 .input,
 .textarea {
-  width: 500px;
+  width: 100%;
   padding: 0.5rem;
   border: 1px solid var(--input-border);
   border-radius: 0.25rem;
   background-color: white;
   color: var(--text-color);
   display: block;
+  box-sizing: border-box;
 }
 
 /* Typography */
@@ -80,8 +84,7 @@ body {
   padding: 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .input:focus,
@@ -145,7 +148,7 @@ body {
   align-items: center;
   gap: 1rem;
   margin-top: 0.5rem;
-  width: 500px;
+  width: 100%;
 }
 
 .slider-label {
@@ -207,6 +210,8 @@ input[type="range"]:focus {
   cursor: pointer;
   margin-top: 2rem;
   transition: opacity 0.2s;
+  width: auto;
+  min-width: 100px;
 }
 
 .submit-button:hover {
