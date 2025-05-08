@@ -16,7 +16,7 @@ Clone this repo, then head over to the Getting Started guide and follow along wi
 No worries! The `step-1-complete` branch implements everything in the Getting Started guide. To see it:
 
 1. `git clone` this repo then `cd good-dogs-demo`
-2. `git checkout step-1-complete`
+2. `git checkout walkthrough-complete`
 3. `npm install`
 4. Update the configuration:
    a. update `localDevKey` and `projectId`
