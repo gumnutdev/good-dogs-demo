@@ -13,7 +13,7 @@ Clone this repo, then head over to the Getting Started guide and follow along wi
 > [!TIP]
 > If you just want to see Gumnut in Action, you can find live demos at https://demo.gumnut.dev
 
-No worries! The `step-1-complete` branch implements everything in the Getting Started guide. To see it:
+No worries! The `walkthrough-complete` branch implements everything in the Getting Started guide. To see it:
 
 1. `git clone` this repo then `cd good-dogs-demo`
 2. `git checkout walkthrough-complete`
